@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>addDoctor</class>
+ <widget class="QDialog" name="addDoctor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>580</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#addDoctor{
+border: 1px solid #5c6266;
+}</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>120</y>
+     <width>261</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label_position">
+      <property name="styleSheet">
+       <string notr="true">#label_position{
+	font-size: 19px;
+   color: #5c6266;
+   text-align: left;
+   padding-left: 5px;
+   background-color: transparent;
+   border-style: solid;
+   border-left: 3px solid transparent;
+   min-width:200px;
+   min-height:25px;
+   max-width:200px;
+   max-height:25px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Имя</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="areaEdit">
+      <property name="styleSheet">
+       <string notr="true">#areaEdit{
+	font-size: 15px;
+	padding-left: 15px;
+	min-height: 30px;
+	max-height: 30px;
+	border: 2px solid #019dbd;
+    border-radius: 16px;
+  	color: #5c6266;
+}
+
+#areaEdit:hover {
+	border: 2px solid #00d4ff;
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_position_2">
+      <property name="styleSheet">
+       <string notr="true">#label_position_2{
+	font-size: 19px;
+   color: #5c6266;
+   text-align: left;
+   padding-left: 5px;
+   background-color: transparent;
+   border-style: solid;
+   border-left: 3px solid transparent;
+   min-width:200px;
+   min-height:25px;
+   max-width:200px;
+   max-height:25px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Фамилия</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="areaEdit_2">
+      <property name="styleSheet">
+       <string notr="true">#areaEdit_2{
+	font-size: 15px;
+	padding-left: 15px;
+	min-height: 30px;
+	max-height: 30px;
+	border: 2px solid #019dbd;
+    border-radius: 16px;
+  	color: #5c6266;
+}
+
+#areaEdit_2:hover {
+	border: 2px solid #00d4ff;
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_position_3">
+      <property name="styleSheet">
+       <string notr="true">#label_position_3{
+	font-size: 19px;
+   color: #5c6266;
+   text-align: left;
+   padding-left: 5px;
+   background-color: transparent;
+   border-style: solid;
+   border-left: 3px solid transparent;
+   min-width:200px;
+   min-height:25px;
+   max-width:200px;
+   max-height:25px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Отчество</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="areaEdit_3">
+      <property name="styleSheet">
+       <string notr="true">#areaEdit_3{
+	font-size: 15px;
+	padding-left: 15px;
+	min-height: 30px;
+	max-height: 30px;
+	border: 2px solid #019dbd;
+    border-radius: 16px;
+  	color: #5c6266;
+}
+
+#areaEdit_3:hover {
+	border: 2px solid #00d4ff;
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_position_4">
+      <property name="styleSheet">
+       <string notr="true">#label_position_4{
+	font-size: 19px;
+   color: #5c6266;
+   text-align: left;
+   padding-left: 5px;
+   background-color: transparent;
+   border-style: solid;
+   border-left: 3px solid transparent;
+   min-width:200px;
+   min-height:25px;
+   max-width:200px;
+   max-height:25px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Зарплата</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="areaEdit_4">
+      <property name="styleSheet">
+       <string notr="true">#areaEdit_4{
+	font-size: 15px;
+	padding-left: 15px;
+	min-height: 30px;
+	max-height: 30px;
+	border: 2px solid #019dbd;
+    border-radius: 16px;
+  	color: #5c6266;
+}
+
+#areaEdit_4:hover {
+	border: 2px solid #00d4ff;
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_position_5">
+      <property name="styleSheet">
+       <string notr="true">#label_position_5{
+	font-size: 19px;
+   color: #5c6266;
+   text-align: left;
+   padding-left: 5px;
+   background-color: transparent;
+   border-style: solid;
+   border-left: 3px solid transparent;
+   min-width:200px;
+   min-height:25px;
+   max-width:200px;
+   max-height:25px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Специальность</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="areaEdit_5">
+      <property name="styleSheet">
+       <string notr="true">#areaEdit_5{
+	font-size: 15px;
+	padding-left: 15px;
+	min-height: 30px;
+	max-height: 30px;
+	border: 2px solid #019dbd;
+    border-radius: 16px;
+  	color: #5c6266;
+}
+
+#areaEdit_5:hover {
+	border: 2px solid #00d4ff;
+}</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>520</y>
+     <width>266</width>
+     <height>44</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>15</number>
+    </property>
+    <property name="sizeConstraint">
+     <enum>QLayout::SetMaximumSize</enum>
+    </property>
+    <item>
+     <widget class="QPushButton" name="cancel">
+      <property name="styleSheet">
+       <string notr="true">	 min-width:140px;
+    min-height:40px;
+    max-width:140px;
+    max-height:40px;
+</string>
+      </property>
+      <property name="text">
+       <string>Отмена</string>
+      </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/image/cancel.png</normaloff>:/image/cancel.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="ok">
+      <property name="styleSheet">
+       <string notr="true">	 min-width:80px;
+    min-height:40px;
+    max-width:80px;
+    max-height:40px;
+</string>
+      </property>
+      <property name="text">
+       <string>Ok</string>
+      </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/image/ok.png</normaloff>:/image/ok.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>301</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame{ 
+background: qlineargradient(spread:pad, x1:0.053, y1:0.733, x2:1, y2:1, stop:0 rgba(0, 128, 	154, 255), stop:0.451724 rgba(82, 143, 156, 255), stop:1 rgba(172, 205, 212, 255));
+border: 2px solid #5c6266;
+border-bottom-right-radius:20px;
+border-bottom-left-radius:20px;
+}
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>30</y>
+      <width>400</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	color: white;
+    font-size: 24px;
+    line-height: 60px;
+    margin-left: 20px;
+    background: transparent;
+font-weight: bold;
+</string>
+    </property>
+    <property name="text">
+     <string>Новый врач</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="close_btn">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>5</y>
+      <width>46</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#close_btn{
+ 	background-image: url(&quot;:/image/pharmacy.png&quot;);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#close_btn:hover {
+    background-image: url(&quot;:/image/pharmacy_act.png&quot;);
+    background-repeat: no-repeat;
+	background-position: center center;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
+ <connections/>
+</ui>
