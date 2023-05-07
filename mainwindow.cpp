@@ -23,15 +23,11 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("./../MedicalApp/DB/AppMedDB_not_foreign_key.db");
+    db.setDatabaseName("./DB/AppMedDB.db");
     if (db.open()){
         qDebug() << "Успешное подключение к базе данных " + db.databaseName();
         model = new QSqlTableModel(this, db);
-
-        //ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents); //выравниваение столбцов по содержимому
-        ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);                     //Выделение всей строки
-        ui->tableView->setSortingEnabled(true);                                                 //Сорировка по столбцам
-        ui->tableView->verticalHeader()->setVisible(false);
+        createTable();
     }
     else
     {
@@ -43,10 +39,50 @@ MainWindow::MainWindow(QWidget *parent)
     ui->menu2->setIcon(QIcon(":/image/doctor.png"));
     ui->menu3->setChecked(true);
     ui->menu4->setIcon(QIcon(":/image/medical-history.png"));
-
-
-
+    //ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents); //выравниваение столбцов по содержимому
+    ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);                     //Выделение всей строки
+    ui->tableView->setSortingEnabled(true);                                                 //Сорировка по столбцам
+    ui->tableView->verticalHeader()->setVisible(false);
 }
+
+void MainWindow::createTable()
+{
+    query = new QSqlQuery(db);
+
+    query->exec("CREATE TABLE IF NOT EXISTS \"Appointment\" ( \n\t"
+                    "\"Id\"	INTEGER,\n\t"
+                    "\"Patient\"	TEXT,\n\t"
+                    "\"Service\"	TEXT,\n\t"
+                    "\"Date\"	TEXT,\n\t"
+                    "\"Time\"	TEXT,\n\t"
+                    "PRIMARY KEY(\"Id\"));");
+
+    query->exec("CREATE TABLE IF NOT EXISTS \"Doctor\" ( \n\t"
+                    "\"Id\"	INTEGER,\n\t"
+                    "\"Name\"	TEXT,\n\t"
+                    "\"Surname\"	TEXT,\n\t"
+                    "\"Patronymic\"	TEXT,\n\t"
+                    "\"Salary\"	INTEGER,\n\t"
+                   "\"Profile\"	TEXT,\n\t"
+                    "PRIMARY KEY(\"Id\"));");
+
+    query->exec("CREATE TABLE IF NOT EXISTS \"Patient\" ( \n\t"
+                    "\"Polis\"	INTEGER,\n\t"
+                    "\"Name\"	TEXT,\n\t"
+                    "\"Surname\"	TEXT,\n\t"
+                    "\"Patronymic\"	TEXT,\n\t"
+                    "\"DateBorn\"	TEXT,\n\t"
+                   "\"Adress\"	TEXT,\n\t"
+                    "PRIMARY KEY(\"Polis\"));");
+
+    query->exec("CREATE TABLE IF NOT EXISTS \"Service\" ( \n\t"
+                    "\"Id\"	INTEGER,\n\t"
+                    "\"Name\"	TEXT,\n\t"
+                    "\"Doctor\"	TEXT,\n\t"
+                    "\"Price\"	INTEGER,\n\t"
+                    "PRIMARY KEY(\"Id\"));");
+}
+
 
 MainWindow::~MainWindow()
 {
@@ -236,34 +272,34 @@ void MainWindow::mouseMoveEvent(QMouseEvent* event)
 void MainWindow::on_add_clicked()
 {
     switch(correctMenuItem){
-    case 1:{
-        AddServise ServiseWnd(0);
-        ServiseWnd.setModal(true);
-        ServiseWnd.exec();
-        model->select();
-        break;
-    }
-    case 2:{
-        addDoctor DoctorWnd(0);
-        DoctorWnd.setModal(true);
-        DoctorWnd.exec();
-        model->select();
-        break;
-    }
-    case 3:{
-        AddPatient PatientWnd(0);
-        PatientWnd.setModal(true);
-        PatientWnd.exec();
-        model->select();
-        break;
-    }
-    case 4:{
-        AddLabel LabelWnd(0);
-        LabelWnd.setModal(true);
-        LabelWnd.exec();
-        model->select();
-        break;
-    }
+        case 1:{
+            AddServise ServiseWnd(0);
+            ServiseWnd.setModal(true);
+            ServiseWnd.exec();
+            model->select();
+            break;
+        }
+        case 2:{
+            addDoctor DoctorWnd(0);
+            DoctorWnd.setModal(true);
+            DoctorWnd.exec();
+            model->select();
+            break;
+        }
+        case 3:{
+            AddPatient PatientWnd(0);
+            PatientWnd.setModal(true);
+            PatientWnd.exec();
+            model->select();
+            break;
+        }
+        case 4:{
+            AddLabel LabelWnd(0);
+            LabelWnd.setModal(true);
+            LabelWnd.exec();
+            model->select();
+            break;
+        }
     }
 }
 
@@ -318,7 +354,6 @@ void MainWindow::on_tableView_clicked(const QModelIndex &index)
     currentRow = index.row();
     currentID = ui->tableView->model()->data(ui->tableView->model()->index(index.row(),0)).toInt();
 }
-
 
 void MainWindow::on_del_clicked()
 {

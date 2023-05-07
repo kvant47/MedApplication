@@ -30,8 +30,9 @@ AddServise::AddServise(int action, QWidget *parent) :
     query = new QSqlQuery();
     query->exec("SELECT name, surname, patronymic FROM doctor");
     while(query->next()){
-        QString fio = query->value(1).toString() + ' ' + query->value(0).toString() + ' ' + query->value(2).toString();
-        ui->comboBox->addItem(fio);
+        ui->comboBox->addItem(query->value(1).toString() +
+                              ' ' + query->value(0).toString() +
+                              ' ' + query->value(2).toString());
     }
 
 }
@@ -69,7 +70,6 @@ AddServise::AddServise(int action, int currentId, QWidget *parent) :
 
 
     query = new QSqlQuery();
-
     QString select = "SELECT name, price FROM service WHERE id = '";
     select +=  CurrentId + "'";
     query->prepare(select);

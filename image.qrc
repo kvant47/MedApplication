@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/drug.png</file>
+        <file>image/pharmacy.png</file>
+        <file>image/doctor.png</file>
+        <file>image/healthcare.png</file>
+        <file>image/medical-history.png</file>
+        <file>image/patient.png</file>
+        <file>image/doctor_act.png</file>
+        <file>image/healthcare_act.png</file>
+        <file>image/medical-history_act.png</file>
+        <file>image/patient_act.png</file>
+        <file>image/pharmacy_act.png</file>
+        <file>image/drug_act.png</file>
+        <file>image/logo1.png</file>
+        <file>image/add_hov.png</file>
+        <file>image/cancel.png</file>
+        <file>image/change.png</file>
+        <file>image/delete.png</file>
+        <file>image/ok.png</file>
+        <file>image/search.png</file>
+        <file>image/hospital.png</file>
+    </qresource>
+</RCC>

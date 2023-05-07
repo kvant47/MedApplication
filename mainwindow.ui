@@ -426,83 +426,13 @@ background: white;
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>100</y>
-      <width>721</width>
-      <height>36</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <property name="spacing">
-      <number>0</number>
-     </property>
-     <item>
-      <widget class="QLineEdit" name="lineEdit">
-       <property name="styleSheet">
-        <string notr="true">#lineEdit{
-	font-size: 15px;
-	padding-left: 15px;
-	min-height: 30px;
-	max-height: 30px;
-	border: 2px solid #019dbd;
-	border-right: 2px solid transparent;
-	border-top-left-radius: 16px;
-    border-bottom-left-radius: 16px;
-  	color: #5c6266;
-}
-
-#lineEdit:hover {
-	border: 2px solid #00d4ff;
-}</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="search">
-       <property name="styleSheet">
-        <string notr="true">#search{
-	font-size: 15px;
-	padding-left: px;
-	min-width: 60px;
-	max-width: 60px;
-	min-height: 34px;
-	max-height: 34px;
-     background: qlineargradient(spread:pad, x1:0.053, y1:0.733, x2:1, y2:1, stop:0 rgba(0, 128, 	154, 255), stop:0.451724 rgba(82, 143, 156, 255), stop:1 rgba(172, 205, 212, 255));
-	border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
-}
-
-#search:hover {
-    background: qlineargradient(spread:pad, x1:0.053, y1:0.733, x2:1, y2:1, stop:0 rgba(1, 157, 189, 255), stop:0.451724 rgba(109, 188, 205, 255), stop:1 rgba(202, 241, 249, 255));
-}</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="image.qrc">
-         <normaloff>:/image/search.png</normaloff>:/image/search.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>23</width>
-         <height>23</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QTableView" name="tableView">
     <property name="geometry">
      <rect>
       <x>241</x>
-      <y>151</y>
+      <y>81</y>
       <width>721</width>
-      <height>371</height>
+      <height>441</height>
      </rect>
     </property>
     <property name="styleSheet">

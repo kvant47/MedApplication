@@ -35,12 +35,12 @@ private slots:
     void on_edit_clicked();
 
 private:
-    void openWindows(int action);
     QSqlDatabase db;
     QSqlTableModel *model;
     QSqlQuery *query;
     Ui::MainWindow *ui;
     int correctMenuItem;
+    void createTable();
     virtual void mousePressEvent(QMouseEvent* event);
     virtual void resizeEvent(QResizeEvent* event);
     virtual void mouseMoveEvent(QMouseEvent* event);

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>font/Comfortaa-Medium.ttf</file>
+        <file>font/Comfortaa-Bold.ttf</file>
+        <file>font/Comfortaa-SemiBold.ttf</file>
+    </qresource>
+</RCC>
